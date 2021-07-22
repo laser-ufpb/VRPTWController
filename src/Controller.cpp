@@ -94,8 +94,7 @@ void Controller::run() {
     dSolution sol = dSolution(data.getInstance());
     readStdoutFromChildProcess(sol);
 
-    //kill(pid, SIGKILL);
-    kill(0, SIGKILL);
+    kill(pid, SIGKILL);
 }
 
 int Controller::popen2(vector< char* > argvs) {
