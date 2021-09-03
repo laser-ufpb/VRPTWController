@@ -1,5 +1,5 @@
 # VRPTWController
-> VRPTWController is used to run and calculate score for the 12th DIMACS Implementation Challenge: VRPTW track. Specified in [Competition Rules](http://dimacs.rutgers.edu/files/1815/9845/6740/VRPTW_Competition_Rules.pdf).
+> VRPTWController is used to run and calculate score for the 12th DIMACS Implementation Challenge: VRPTW track. Specified in [Competition Rules](http://dimacs.rutgers.edu/files/8816/3061/5606/VRPTW_Competition_Rules.pdf).
 
 ## Installation
 
