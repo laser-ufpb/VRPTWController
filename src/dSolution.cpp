@@ -1,4 +1,5 @@
 #include "dSolution.h"
+#define EPS 1e-6
 
 bool dSolution::checkSolution() {
     double solCost          = 0;
@@ -20,7 +21,7 @@ bool dSolution::checkSolution() {
         
         travelTime = max(travelTime + edgeCost, (double) instance->l[route.at(0)]);
         // std::cout << "(0," << route.at(0) << ") c" << edgeCost << " t" << travelTime << std::endl;
-        if(travelTime > instance->u[route.at(0)]) { // checks TW violation
+        if(travelTime > instance->u[route.at(0)] + EPS) { // checks TW violation
             std::cout << "TW of " << route.at(0) << " ([" << instance->l[route.at(0)]
                 << "," << instance->u[route.at(0)] << "]) was violated (arrival time = " << travelTime << ")" << std::endl;
             return false;
@@ -39,7 +40,8 @@ bool dSolution::checkSolution() {
 
             travelTime = max(travelTime + edgeCost + (double) instance->s[route.at(i - 1)], (double) instance->l[route.at(i)]);
             // std::cout << "("<< route.at(i - 1) << "," << route.at(i) << ") c" << edgeCost << " t" << travelTime << std::endl;
-            if(travelTime > instance->u[route.at(i)]) { // checks TW violation
+
+            if(travelTime > instance->u[route.at(i)] + EPS) { // checks TW violation
                 std::cout << "TW of " << route.at(i) << " ([" << instance->l[route.at(i)] 
                     << "," << instance->u[route.at(i)] << "]) was violated (arrival time = " << travelTime << ")" << std::endl;
                 return false;
