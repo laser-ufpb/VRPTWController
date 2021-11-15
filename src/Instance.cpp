@@ -1,6 +1,6 @@
 #include "Instance.h"
 
-Instance::Instance(const char* instanciaPath) {
+Instance::Instance(const char* instanciaPath) : dimension(0) {
     FILE* file = fopen(instanciaPath, "r");
 
     if(!file) {
