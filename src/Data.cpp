@@ -10,12 +10,14 @@ Data::Data(int argc, char* arguments[]) {
     this->baseSolution = bestKnownSolution * 1.1;
     this->isOptimal    = atoi(arguments[6]);
     this->solverName   = string(arguments[7]);
+    this->timeLimitStr = std::to_string((int) round(baseTimeLimit / ((double) passMark / CPU_BASE_REF)));
 
     this->instance = Instance(this->path.c_str());
 }
 
 string Data::createHeader() {
-    string header = "12th DIMACS Implementation Challenge: Vehicle Routing\nVRPTW track\nCompetitor: " + competitorName + "\n";
+    string header = "12th DIMACS Implementation Challenge: Vehicle Routing\nVRPTW track\nController version: November 17, 2021\nCompetitor: " 
+                    + competitorName + "\n";
 
     try {
         header += getOS();
@@ -182,7 +184,7 @@ string Data::getNameOfOutputFile() {
 // Get Argvs as a vector of cstrings
 vector< char* > Data::getExecParameters() {
     // vector< char* > tokens = {&(this->solverName[0]), &(this->path[0]), &(this->euc_2d[0]), NULL};
-    vector< char* > tokens = {&(this->solverName[0]), &(this->path[0]), NULL};
+    vector< char* > tokens = {&(this->solverName[0]), &(this->path[0]), &(this->timeLimitStr[0]), NULL};
 
     return tokens;
 }

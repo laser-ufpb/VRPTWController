@@ -36,6 +36,7 @@ class Data {
     string path;
     string solverName;
     string euc_2d;
+    string timeLimitStr;
     Instance instance;
 
 
