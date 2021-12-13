@@ -38,7 +38,7 @@ void Controller::readStdoutFromChildProcess(T sol) {
             continue;
 
         // Check if solution found has cost greater than the value of baseSolution and if is not feasible
-        if( !sol.checkSolution() || ((this->lastSolutionCostFound - sol.cost) < 0.1) ) {
+        if( !sol.checkSolution() || ((this->lastSolutionCostFound - sol.cost) < 0.05) ) {
             sol = T(data.getInstance());
             continue;
         }
@@ -67,7 +67,7 @@ void Controller::readStdoutFromChildProcess(T sol) {
         this->lastPassedTime        = t_i;
 
         // Checking if the solution is better or equal to BKS. 
-        if(data.isOptimal && (sol.cost - data.bestKnownSolution) < 0.01) {
+        if(data.isOptimal && (sol.cost - data.bestKnownSolution) < 0.05) {
             pclose(fp);
             break;
         }
