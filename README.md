@@ -1,5 +1,5 @@
 # VRPTWController
-> VRPTWController is used to run and calculate score for the 12th DIMACS Implementation Challenge: VRPTW track. Specified in [Competition Rules](http://dimacs.rutgers.edu/files/8816/3061/5606/VRPTW_Competition_Rules.pdf).
+> VRPTWController is used to run and calculate score for the 12th DIMACS Implementation Challenge: VRPTW track. Specified in [Competition Rules](http://dimacs.rutgers.edu/files/8516/3848/0275/VRPTW_Competition_Rules.pdf).
 
 ## Installation
 
@@ -49,7 +49,7 @@ sh VRPTW-Script1.sh
 sh genScript.sh Wolverine 2064 Solver1 > VRPTW-Script1.sh
 sh VRPTW-Script1.sh
 ```
-_For more examples and usage, please refer to the [Competition Rules](http://dimacs.rutgers.edu/files/8816/3061/5606/VRPTW_Competition_Rules.pdf)._
+_For more examples and usage, please refer to the [Competition Rules](http://dimacs.rutgers.edu/files/8516/3848/0275/VRPTW_Competition_Rules.pdf)._
 
 ### How to call the solver indirectly via shell script
 Suppose a file named <i>solver</i> has the following content:
