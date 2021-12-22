@@ -34,19 +34,19 @@ The output will be at `build/` as `DIMACS-VRPTW-Dummy-R108.out`.
 ./VRPTWController Wolverine R108.txt 2064 1800 932.1 1 Solver1
 ```
 
-### How to run all instances:
+### How to run the instances:
 Generating the script:
 ```sh
-sh genScript.sh <Competitor ID> <CPU mark> <Solver path> > VRPTW-Script1.sh
+sh genScript1.sh <Competitor ID> <CPU mark> <Solver path> > VRPTW-Script1.sh
 ```
-Running all instances:
+Running the instances:
 ```sh
 sh VRPTW-Script1.sh
 ```
 
 ### Example:
 ```sh
-sh genScript.sh Wolverine 2064 Solver1 > VRPTW-Script1.sh
+sh genScript1.sh Wolverine 2064 Solver1 > VRPTW-Script1.sh
 sh VRPTW-Script1.sh
 ```
 _For more examples and usage, please refer to the [Competition Rules](http://dimacs.rutgers.edu/files/8516/3848/0275/VRPTW_Competition_Rules.pdf)._
