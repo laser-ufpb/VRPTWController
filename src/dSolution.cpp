@@ -57,7 +57,7 @@ bool dSolution::checkSolution() {
         solCost += edgeCost;
         travelTime = max(travelTime + edgeCost + (double) instance->s[route.at(route.size() - 1)], (double) instance->l[0]);
         // std::cout << "("<< route.at(route.size() - 1) << "," << 0 << ") c" << edgeCost << " t" << travelTime << std::endl;
-        if(travelTime > instance->u[0]) { // checks TW violation
+        if(travelTime > instance->u[0] + EPS) { // checks TW violation
             std::cout << "TW of " << 0 << " ([" << instance->l[0] 
                 << "," << instance->u[0] << "]) was violated (arrival time = " << travelTime << ")" << std::endl;
             return false;
